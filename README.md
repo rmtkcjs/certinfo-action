@@ -2,74 +2,56 @@
 
 ### Now for a little internet optimism
 
-# Sample README
+# Certinfo Action
 
-Open with intent - we welcome contributions - we want pull requests and to hear about issues.
+This action makes the [certinfo](https://github.com/pete911/certinfo) tool
+available to Actions workflows by:
 
-## Who is this for?
+* Downloading certinfo
+* Adding `certinfo` to path
 
-The README should be addressed to somebody who's never seen this before.
-But also don't assume that they're a novice.
+So that certificates can be validated as part of a workflow.
 
-### Code user
+# Usage
 
-Does this repo publish to [pub.dev](https://pub.dev) or similar?
-In which case the code user just needs a pointer there - e.g. [at_client on pub.dev](https://pub.dev/packages/at_client)
+## Basic example
 
-### Contributor
+```yaml
+name: Certinfo
 
-This is the person who we want working with us here.
-[CONTRIBUTING.md](CONTRIBUTING.md) is going to have the detailed guidance on how to setup their tools,
-tests and how to make a pull request.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-## Why, What, How?
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-### Why?
+    steps:
+      - uses: actions/checkout@v2
+      - uses: atsign-company/certinfo-action@v1
 
-What is the purpose of this project?
+      - name: Get certinfo for root server
+        run: certinfo root.atsign.org:64
+```
 
-### What?
+# Version History
 
-What is needed to get the project and its dependencies installed?
+## v0.1
+* Initial version.
 
-### How?
+## Acknowledgement/Attribution
 
-How does this work? How is this used to fulfil its intended purpose?
+[Certinfo](https://github.com/pete911/certinfo) was created by Peter Reisinger
+(@pete911)[https://github.com/pete911] and uses the
+[MIT License](https://github.com/pete911/certinfo/blob/main/LICENSE)
 
-## Checklist
+## LICENSE
 
-### Writing
-
-Does the writing flow, with proper grammar and correct spelling?
-
-### Links
-
-Are the links to external resources correct?
-Are the links to other parts of the project correct
-(beware stuff carried over from previous repos where the
-project might have lived during earlier development)?
-
-### Description
-
-Has the Description field been filled out?
-
-### Acknowledgement/Attribution
-
-Have we correctly acknowledged the work of others (and their Trademarks etc.)
-where appropriate (per the conditions of their LICENSE?
-
-### LICENSE
-
-Which LICENSE are we using?  
-Is the LICENSE(.md) file present?  
-Does it have the correct dates, legal entities etc.?
+Licensed under the BSD 3 clause [LICENSE](LICENSE)
 
 ## Maintainers
 
-Who created this?  
-
-Do they have complete GitHub profiles?  
-
-How can they be contacted?  
-
-Who is going to respond to pull requests?  
+This project was created by [@cpswan](https://github.com/cpswan/)
