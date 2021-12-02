@@ -64,7 +64,7 @@ jobs:
 ## Acknowledgement/Attribution
 
 [Certinfo](https://github.com/pete911/certinfo) was created by Peter Reisinger
-(@pete911)[https://github.com/pete911] and uses the
+[@pete911](https://github.com/pete911) and uses the
 [MIT License](https://github.com/pete911/certinfo/blob/main/LICENSE)
 
 ## LICENSE
