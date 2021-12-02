@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: atsign-company/certinfo-action@v0.4 
+      - uses: atsign-company/certinfo-action@v0.5
 
       - name: Get certinfo for root server
         run: certinfo root.atsign.org:64

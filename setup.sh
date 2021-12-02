@@ -19,6 +19,7 @@ if [ $? -ne 0 ]; then
 fi
 
 rm "${HOME}/certinfo.tgz"
+mv certinfo ${RUNNER_TOOL_CACHE}
 
 # Report success, and print version.
 echo -e "Successfully installed Certinfo:"
