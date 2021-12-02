@@ -39,6 +39,25 @@ jobs:
 
 # Version History
 
+## v1.0
+* Promoted to 1.0
+
+## v0.6
+* Add RUNNER_TOOL_CACHE to PATH
+* Got it working
+
+## v0.5
+* Move certinfo to RUNNER_TOOL_CACHE
+
+## v0.4
+* Follow redirects to fetch from GitHub releases
+
+## v0.3 
+* Updated test workflow
+
+## v0.2
+* Made setup.sh executable
+
 ## v0.1
 * Initial version.
 
