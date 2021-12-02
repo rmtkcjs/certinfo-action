@@ -10,7 +10,7 @@ VERSION=$(curl --silent "https://api.github.com/repos/pete911/certinfo/releases/
 
 URL="https://github.com/pete911/certinfo/releases/download/v${VERSION}/certinfo_${VERSION}_linux_amd64.tar.gz"
 
-curl --connect-timeout 15 --retry 5 "$URL" > "${HOME}/certinfo.tgz"
+curl -L --connect-timeout 15 --retry 5 "$URL" > "${HOME}/certinfo.tgz"
 tar -xvf "${HOME}/certinfo.tgz" certinfo
 
 if [ $? -ne 0 ]; then
