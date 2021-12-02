@@ -20,6 +20,7 @@ fi
 
 rm "${HOME}/certinfo.tgz"
 mv certinfo ${RUNNER_TOOL_CACHE}
+echo "${RUNNER_TOOL_CACHE}" >> $GITHUB_PATH
 
 # Report success, and print version.
 echo -e "Successfully installed Certinfo:"
