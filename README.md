@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: atsign-company/certinfo-action@v1
 
       - name: Get certinfo for root server
@@ -36,6 +36,10 @@ jobs:
 ```
 
 # Version History
+
+## v1.0.1
+* Converted action.yml and test.yml from CRLF to LF
+* Bumped checkout to v3 in example
 
 ## v1.0
 * Promoted to 1.0
